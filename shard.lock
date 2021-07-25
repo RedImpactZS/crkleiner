@@ -1,0 +1,30 @@
+version: 2.0
+shards:
+  bson:
+    git: https://github.com/elbywan/bson.cr.git
+    version: 0.3.3
+
+  db:
+    git: https://github.com/crystal-lang/crystal-db.git
+    version: 0.10.1
+
+  discordcr:
+    git: https://github.com/shardlab/discordcr.git
+    version: 0.4.1
+
+  mysql:
+    git: https://github.com/crystal-lang/crystal-mysql.git
+    version: 0.13.0
+
+  popcorn:
+    git: https://github.com/icyleaf/popcorn.git
+    version: 0.3.0
+
+  sqlite3:
+    git: https://github.com/crystal-lang/crystal-sqlite3.git
+    version: 0.18.0
+
+  totem:
+    git: https://github.com/icyleaf/totem.git
+    version: 0.7.0
+

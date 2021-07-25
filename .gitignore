@@ -1,0 +1,6 @@
+config.yml*
+!config.yml.example
+/messages.db
+/lib
+/bin
+/.vscode

@@ -1,0 +1,24 @@
+name: crkleiner
+version: 0.1.0
+
+authors:
+  - deinferno (de_inferno666@yandex.ru)
+
+description: |
+  Short description of crkleiner
+
+targets:
+  crkleiner:
+    main: src/main.cr
+
+# license: MIT
+dependencies:
+  discordcr:
+    github: shardlab/discordcr
+  mysql:
+    github: crystal-lang/crystal-mysql
+  sqlite3:
+    github: crystal-lang/crystal-sqlite3
+  bson:
+    github: elbywan/bson.cr
+    version: 0.3.3
