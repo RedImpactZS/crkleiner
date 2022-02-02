@@ -58,10 +58,10 @@ module Messages
     return "https://cdn.discordapp.com/avatars/#{user_id}/a_#{avatar}.webp?size=256"
   end
 
-  def main(client, cache)
+  def main(client, config, cache)
     client.on_ready do |payload|
       puts "User '#{payload.user.username}' is ready"
-      client.status_update(game: Discord::GamePlaying.new("Bonjour monsieur", Discord::GamePlaying::Type::Playing))
+      client.status_update(game: Discord::GamePlaying.new(config.messages_welcome, Discord::GamePlaying::Type::Playing))
     end
 
     db = DB.open "sqlite3://./messages.db"

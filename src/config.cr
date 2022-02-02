@@ -5,6 +5,7 @@ struct Config
   include YAML::Serializable
 
   property messages_enabled : Bool = true
+  property messages_welcome : String = "Bot is ready"
   property web_enabled : Bool = true
   property web_hostname : String = "localhost"
   property web_port : Int32 = 3444

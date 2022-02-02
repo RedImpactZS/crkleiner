@@ -1,4 +1,5 @@
 messages_enabled: true
+messages_welcome: Your hello message
 botapi_token: local_api_token_here
 discord_token: discord_api_token_here
 discord_client_id: discord_client_id_here
