@@ -75,13 +75,20 @@ module Web
           ref = github.ref.split('/').last
           commits = github.commits
 
-          text = ""
+          text = "```md\n#{commits.size} new commit(s) of #{github.repository.name}:#{ref}\n "
 
           commits.each do |commit|
-            text += "$Commit \##{commit.id[0..7]} by #{commit.author.name}\n #{commit.message.gsub(REGEX, "\n ")}"
+            text += "\n$Commit \##{commit.id[0..7]} by #{commit.author.name}\n #{commit.message.gsub(REGEX, "\n ")}"
+            if text.size > 1600
+              client.create_message(CID_GITHUB, "#{text} ```")
+              sleep 1.seconds
+              text = "```md\n "
+            end
           end
 
-          client.create_message(CID_GITHUB, "```md\n#{commits.size} new commit(s) of #{github.repository.name}:#{ref}\n #{text} ```")
+          if text.size > 16
+            client.create_message(CID_GITHUB, " #{text} ```")
+          end
 
           resp.respond_with_status(HTTP::Status::OK, "")
           next
