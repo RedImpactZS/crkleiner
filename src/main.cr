@@ -16,7 +16,7 @@ def main
 
   config.web_enabled && spawn Web.main client, config
   config.mysql_enabled && spawn MySQL.main client, config
-  config.messages_enabled && spawn Messages.main client, config, cache
+  spawn Messages.main client, config, cache
 
   sleep
 end

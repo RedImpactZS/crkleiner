@@ -6,7 +6,7 @@ shards:
 
   db:
     git: https://github.com/crystal-lang/crystal-db.git
-    version: 0.11.0
+    version: 0.13.1
 
   discordcr:
     git: https://github.com/shardlab/discordcr.git
@@ -14,9 +14,9 @@ shards:
 
   mysql:
     git: https://github.com/crystal-lang/crystal-mysql.git
-    version: 0.14.0
+    version: 0.16.0
 
   sqlite3:
     git: https://github.com/crystal-lang/crystal-sqlite3.git
-    version: 0.19.0
+    version: 0.21.0
 

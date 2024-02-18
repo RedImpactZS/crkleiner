@@ -20,7 +20,7 @@ module MySQL
       loop do
         sdata = Array(ServerData).new
 
-        db.query "SELECT id,players,slots,map FROM `gex_servers` WHERE id < 100 ORDER BY id" do |rs|
+        db.query "SELECT id,players,slots,map FROM `gex_servers` WHERE (id < 100 AND players > 0) ORDER BY id" do |rs|
           rs.each do
             sdata.push(ServerData.new(rs.read(Int32), rs.read(Int32), rs.read(Int32), rs.read(String)))
           end

@@ -64,6 +64,11 @@ module Messages
       client.status_update(game: Discord::GamePlaying.new(config.messages_welcome, Discord::GamePlaying::Type::Playing))
     end
 
+    if !config.messages_enabled 
+      client.run
+      return
+    end
+
     db = DB.open "sqlite3://./messages.db"
 
     spawn do
